@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💖 Un correo para ti, mai lob 💖</title>
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<audio id="bg-music" loop>
+  <source src="musica/cancion.mp3.mp3" type="audio/mpeg">
+
+</audio>
+
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  color: #333;
+}
+
+/* PANTALLAS */
+.screen {
+  display: none;
+  animation: fadeIn 0.8s ease;
+  width: 100%;
+}
+
+.active {
+  display: block;
+}
+
+h2 {
+  margin: 30px 0 20px;
+}
+
+/* IMÁGENES PRINCIPALES */
+.main-img {
+  width: 280px;
+  height: auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.main-img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENEDOR CARTA + DECORACIONES */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+/* PILAS DE IMÁGENES */
+.side-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.side-img {
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* CARTA */
+.card {
+  background: repeating-linear-gradient(
+    white,
+    white 28px,
+    #e3e3e3 29px
+  );
+  border: 2px solid #e5e5e5;
+  padding: 60px 80px;
+  width: 90%;
+  max-width: 1100px;
+  text-align: left;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4em;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
+  line-height: 1.8;
+  text-align: justify;
+  color: #444;
+  margin: 12px 0;
+}
+
+/* BOTÓN */
+.return-btn {
+  margin: 30px 0 50px;
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ff4f81;
+  color: white;
+}
+
+.return-btn:hover {
+  background-color: #ff2a66;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+  }
+
+  .side-stack {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .side-img {
+    width: 90px;
+  }
+
+  .card {
+    padding: 40px 30px;
+  }
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1 -->
+<div class="screen active" id="screen1">
+  <h2>Hola mi amol, te llegó un correo ❤️</h2>
+  <img src="imagenes/mess1.jpg" class="main-img" onclick="nextScreen(2)">
+</div>
+
+<!-- SCREEN 2 -->
+<div class="screen" id="screen2">
+  <h2>Es una cartita para ti ❤️</h2>
+  <img src="imagenes/mess2.jpg" class="main-img" onclick="nextScreen(3)">
+</div>
+
+<!-- SCREEN 3 -->
+<div class="screen" id="screen3">
+  <h2>¡Ábrela!</h2>
+  <img src="imagenes/f1.jpg" class="main-img" onclick="nextScreen(4)">
+</div>
+
+<!-- SCREEN 4 -->
+<div class="screen" id="screen4">
+  <h2>¿Qué dirá?</h2>
+  <img src="imagenes/l1.jpg" class="main-img" onclick="nextScreen(5)">
+</div>
+
+<!-- SCREEN 5 -->
+<div class="screen" id="screen5">
+
+  <div class="card-wrapper">
+
+    <!-- IZQUIERDA -->
+    <div class="side-stack">
+      <img src="imagenes/izq1.jpeg" class="side-img">
+      <img src="imagenes/iz2.jpeg" class="side-img">
+      <img src="imagenes/izq3.jpeg" class="side-img">
+      <img src="imagenes/izq5.jpeg" class="side-img">
+      <img src="imagenes/iz4.jpeg" class="side-img">
+
+    </div>
+
+    <!-- CARTA -->
+    <div class="card">
+      <h3>Feliz aniversario amol ❤️</h3>
+
+      <p>Querido,</p>
+
+      <p>
+        Eres tú un cielo, mi más grande ahnelo.
+        Aún recuerdo el día que nos conocimos, nunca me imaginé que en esa noche conocería a una persona tan increíble como tú, amor. Gracias por dar lo mejor de ti para hacer de cada momento, un recuerdo muy bonito. 
+
+      </p>
+
+      <p>
+        Cómo olvidar la sala de la Coca-Cola. Fue el escenario de nuestro primer beso; el primer lugar al que me llevaste y que jamás olvidaré, porque ahí comenzó algo bonito y, sin saberlo, ya me habías robado el corazón. 
+      </p>
+
+      <p>
+        Cada día que paso contigo aprendo más de ti y es algo que me encanta porque te has vuelto mi persona favorita. Siempre me cuestioné el que se sentiría ser amada y tu has aparecido en mi vida para responder esa pregunta con hechos y con amor y siempre estaré agradecida contigo por ello, y antes de que me digas algo cariño, eso nunca me cansaré de decírtelo.
+      </p>
+
+      <p> 
+        ¿Dónde rayos habías estado todo este tiempo?
+      </p>
+      <p>
+        No se que nos depare la vida más adelante, pero de lo que no hay duda es que cada día que paso a tu lado me enamoras cada vez más y más, y tengo la seguridad de que cada reto que pase lo superaremos. Estoy sumamente enamorada de ti, mi chico alias el quemado de roblos, el pro en fri fayer, el millonario de avanin y el mejor hombre de imbhum. Amol, me tienes a tus pies. 
+      </p>
+      <p>
+        Deseo que te guste la canción que puse de fondo, ai loviu
+      </p>
+      <p>Con mucho cariño,</p>
+      <p>Montserrat 💌</p>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="side-stack">
+      <img src="imagenes/de1.jpeg" class="side-img">
+      <img src="imagenes/de2.jpeg" class="side-img">
+      <img src="imagenes/de3.jpeg" class="side-img">
+      <img src="imagenes/de4.jpeg" class="side-img">
+      <img src="imagenes/de5.jpeg" class="side-img">
+    </div>
+
+  </div>
+
+  <button class="return-btn" onclick="nextScreen(1)">🔙 Regresar</button>
+
+</div>
+
+<script>
+function nextScreen(num) {
+  const current = document.querySelector(".screen.active");
+  if (current) current.classList.remove("active");
+
+  document.getElementById("screen" + num).classList.add("active");
+
+  // 🎵 Iniciar música al primer clic
+  const music = document.getElementById("bg-music");
+  if (music.paused) {
+    music.volume = 0.3; // volumen suave
+    music.play().catch(() => {});
+  }
+}
+</script>
+
+</body>
+</html>
